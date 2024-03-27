@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}SubCategory{% endblock %}
+
+
+{% block body %}
+
+    {% for i in category_list.sub_category.all %}
+        <a href="{% url 'ProductPage' category_list.slug i.slug  %}">{{ i.name }}</a><br>
+    {% endfor %}
+{% endblock %}
